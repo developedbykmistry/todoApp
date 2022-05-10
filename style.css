@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: hsl(235, 21%, 11%);
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg {
+    position: fixed;
+    top: 0%;
+    left: 0%    ;
+    background-image: url(./bg-desktop-dark.jpg);
+    height: 40vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    z-index: 2;
+    color: #fff;
+    max-width: 650px;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 7px;
+    margin-top: 15vh;
+}
+
+main {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.newTodo {
+    padding: 15px 25px;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    display: flex;
+}
+
+.circle {
+    border: 1px solid rgb(129, 129, 129);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    color: #eee;
+    width: 100%;
+}
+
+input:-moz-placeholder {
+    color: #fff;
+}
+
+.todos {
+    height: 50vh;
+    width: 100%;
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(235, 33%, 14%);
+    border-top-right-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    height: 2px;
+    width: 2px;
+    background-color: hsl(235, 18%, 25%);
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid #88888893;
+    cursor: pointer;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+.todo-task {
+    font-size: 1.2rem;
+    color: rgb(241, 241, 241);
+    margin-left: 15px;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.todo-task::-webkit-scrollbar {
+    display: none;
+}
+
+.details {
+    border-top: 1px solid rgb(73, 73, 73);;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1em 1em;
+    color: rgb(131, 131, 131);
+    box-shadow: 23px 20px 15pxrgb(116, 27, 27)5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.todos-left p {
+    color:  hsl(235, 100%, 75%);
+}
+
+.clear-todos {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: hsl(0, 0%, 67%);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 4em;
+        width: 100%;
+        text-align: center;
+        margin-top: 8vh;
+    }
+
+    main {
+        width: 100%;
+        margin: auto;
+        margin-top: 2em;
+        padding: 1em;
+    }
+}
